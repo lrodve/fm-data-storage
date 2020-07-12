@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background-image: url("../images/bg-mobile.svg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 7%;
+  height: 100vh;
+}
+
+.card_brand {
+  background-color: hsl(228, 56%, 26%);
+  width: 100%;
+  padding: 40px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.card_icons {
+  margin-top: 30px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.box_icon {
+  padding: 10px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  min-width: 50px;
+  height: 50px;
+}
+
+.card_usage {
+  background-color: hsl(228, 56%, 26%);
+  padding: 40px;
+  color: white;
+  margin-top: 20px;
+  border-radius: 8px;
+  width: 100%;
+  position: relative;
+}
+
+.card_usage p {
+  font-size: 14px;
+}
+.card_usage .card_usage_title {
+  font-weight: lighter;
+  text-align: center;
+  padding: 0 0 20px;
+}
+
+.card_usage .range_bar {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background: hsl(229, 57%, 11%);
+  border-radius: 10px;
+  outline: 0;
+}
+.card_usage .range_bar_fill {
+  width: 80%;
+  height: 14px;
+  border-radius: 10px;
+  margin-left: 4px;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  position: relative;
+}
+.card_usage .range_bar_fill:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: white;
+  top: 1px;
+  right: 2px;
+}
+.usage_text {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.usage_amount {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.usage_amount .text {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: hsl(229, 7%, 55%);
+  font-weight: bold;
+}
+
+.usage_amount .number {
+  margin-right: 10px;
+  font-size: 32px;
+  color: black;
+  font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-color: hsl(229, 57%, 11%);
+    background-image: url("../images/bg-desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 50vh;
+    background-position: bottom;
+    flex-direction: row;
+  }
+  .card_brand {
+    max-width: 400px;
+    margin-right: 50px;
+    padding-left: 50px;
+  }
+
+  .card_usage {
+    max-width: 600px;
+  }
+
+  .card_usage .card_usage_title {
+    text-align: start;
+  }
+
+  .usage_amount {
+    position: absolute;
+    top: -40px;
+    right: 50px;
+    left: unset;
+    bottom: unset;
+    width: 30%;
+    transform: none;
+    border-bottom-right-radius: 0;
+  }
+
+  .usage_amount:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 30px solid white;
+    border-left: 30px solid transparent;
+    bottom: -30px;
+    right: 0;
+  }
+}
